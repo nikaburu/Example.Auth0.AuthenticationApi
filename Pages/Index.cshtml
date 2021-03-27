@@ -1,0 +1,19 @@
+﻿@page
+@model Example.Auth0.AuthenticationApi.Pages.IndexModel
+
+<h1>Auth0 Management API: Users</h1>
+<table>
+    <tr>
+        <th>Email</th>
+        <th>Nickname</th>
+        <th>Last Login</th>
+    </tr>
+    @foreach (var user in Model.Users)
+    {
+        <tr>
+            <td>@user.Email</td>
+            <td>@user.NickName</td>
+            <td>@user.LastLogin</td>
+        </tr>
+    }
+</table>
